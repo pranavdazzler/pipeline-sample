@@ -13,7 +13,7 @@ pipeline{
         }
     }
     post{
-        failure{
+        always{
             emailext body: 'your pipeline has been failed, please go through that.', subject: 'Pipline has been failed', to: 'ashiqumail@gmail.com'
         }
     }
