@@ -1,0 +1,25 @@
+pipeline{
+    agent any
+    stages{
+        stage("Code Gathering"){
+            steps{
+                echo "downloaded"
+            }
+        }
+        stage("Test Initiated"){
+            steps{
+                echo "testing done"
+            }
+        }
+        stage("Building Started"){
+            steps{
+                echo "building completed"
+            }
+        }
+        stage("Deployment Started"){
+            steps{
+                echo "code successfully deployed"
+            }
+        }
+    }
+}
