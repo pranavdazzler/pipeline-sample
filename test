@@ -1,0 +1,30 @@
+pipeline{
+    agent any
+    stages{
+        stage("Code Gathering"){
+            steps{
+                echo "downloaded"
+            }
+        }
+        stage("Test Initiated"){
+            steps{
+                echo "testing done"
+            }
+        }
+        stage("Building Started"){
+            steps{
+                echo "building completed"
+            }
+        }
+        stage("Deployment Started"){
+            steps{
+                echo "code successfully deployed"
+            }
+        }
+    }
+    post{
+        always{
+            emailext body: 'your pipeline has been failed, please go through that.', subject: 'Pipline has been failed', to: 'pranavlearning123@gmail.com'
+        }
+    }
+}
