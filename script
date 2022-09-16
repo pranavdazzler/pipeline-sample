@@ -19,7 +19,7 @@ pipeline{
     }
     post{
         always{
-            emailext body: 'your pipeline has been failed, please go through that.', subject: 'Pipline has been failed', to: 'kadalundip@gmail.com'
+            emailext body: 'PIPELINE HAS FAILED', subject: 'PIPELINE ', to: 'pranavlearning123@gmail.com'
         }
     }
 }
