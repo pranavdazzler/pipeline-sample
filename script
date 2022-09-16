@@ -6,6 +6,11 @@ pipeline{
                 echo "build"
             }
         }
+        stage("scm pull"){
+            steps{
+              echo "git pull"
+              }
+              }
         stage("test"){
             steps{
                 echo "test"
@@ -14,7 +19,7 @@ pipeline{
     }
     post{
         always{
-            emailext body: 'your pipeline has been failed, please go through that.', subject: 'Pipline has been failed', to: 'ashiqumail@gmail.com'
+            emailext body: 'your pipeline has been failed, please go through that.', subject: 'Pipline has been failed', to: 'kadalundip@gmail.com'
         }
     }
 }
